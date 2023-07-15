@@ -52,7 +52,7 @@ it is can also offer some other important benefits.
     - Payment
     - Show orders
 
-- [Pages](https://github.com/MoAfifi0/Zoalinoo/tree/main/PAGES)
+- [Pages](https://github.com/MoAfifi0/Zoalinoo/tree/main/pages)
     - About
     - Contactt
     - Zoalinoo
