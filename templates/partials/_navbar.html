@@ -40,8 +40,8 @@
             {% if request.user.is_authenticated %}
             <a class="dropdown-item" href="{% url 'profile' %}">Profile ({{request.user.username}})</a>
             <a href="{% url 'show_product_favorite' %}" class="dropdown-item">My Favorites</a>
-            <a href="{% url 'cart' %}" class="dropdown-item">My Cart</a>
-            <a href="{% url 'show_orders' %}" class="dropdown-item">My Orders</a>
+            <a href="{% url 'show_orders' %}" class="dropdown-item">My Cart</a>
+            <a href="{% url 'cart' %}" class="dropdown-item">My Orders</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{% url 'logout' %}">
               Logout
