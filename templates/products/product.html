@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}Product Details{% endblock %}
 
 {% block content %}
 <div class="my-form container p-5 my-5 rounded border border-warning">
     <form id="frmaddtocart" action="{% url 'add_to_cart' %}">
-        <h2 class="text-center">Product Details</h2>
+        <h2 class="text-center">{% trans 'Product Details' %}</h2>
         <hr>
 
           {% include 'partials/_alerts.html' %}
@@ -25,10 +26,10 @@
                         <hr>
                         <p class="card-text" id="description">{{pro.description}}</p>
                         <hr>
-                        <p class="card-text">Current Price: <span id="price" class="bg-dark text-light rounded-circle p-2">{{pro.price}} SDG</span></p>
+                        <p class="card-text">{% trans 'Current Price: ' %}<span id="price" class="bg-dark text-light rounded-circle p-2">{{pro.price}} SDG</span></p>
                         <hr>
                         <button type="button" class="btn btn-warning"
-                        data-toggle="modal" data-target="#staticBackdrop">Add To Cart</button>
+                        data-toggle="modal" data-target="#staticBackdrop">{% trans 'Add To Cart' %}</button>
 
 
 
@@ -37,20 +38,20 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Select Quantity</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">{% trans 'Select ' %}'</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <label for="inputQty">Quantity: </label>
+        <label for="inputQty">{% trans 'Quantity: ' %}</label>
             <input type="text" class="form-control" name="qty" id="inputQty" value="1" placeholder="" required>
             <input type="hidden" name="pro_id" value="{{pro.id}}">
             <input type="hidden" name="price" value="{{pro.price}}">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondwary" data-dismiss="modal" id="btnclose">Close</button>
-        <button onclick="addtocart()" class="btn btn-warning" >Confirm</button>
+        <button type="button" class="btn btn-secondwary" data-dismiss="modal" id="btnclose">{% trans 'Close' %}</button>
+        <button onclick="addtocart()" class="btn btn-warning" >{% trans 'Confirm' %}</button>
       </div>
     </div>
   </div>
@@ -66,7 +67,7 @@
                         </a>
 
                         <hr>
-                        <a href="{% url 'products' %}" class="btn btn-warning">All Products</a>
+                        <a href="{% url 'products' %}" class="btn btn-warning">{% trans 'All Products' %}</a>
                         <a href="{% url 'index' %}" class="btn btn-warning text-white">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                             <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>

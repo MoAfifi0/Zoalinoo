@@ -1,9 +1,10 @@
+{% load i18n %}
 {% if messages %}
         {% for msg in messages %}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>
                 {% if 'danger' == msg.tags %}
-                    Error
+                {% trans 'Error' %}
                 {% else %}
                     {{msg.tags|title}}
                 {% endif %}

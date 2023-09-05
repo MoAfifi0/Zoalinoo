@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!--footer-->
 <footer class="pt-4 navbar-custom text-light">
     <div class="container-fluid text-center text-md-left">
@@ -8,16 +9,16 @@
         <div class="col-md-6 mt-md-0 mt-3">
           <h5 class="text-uppercase">
             <img src="{% static 'img/zoalinoo.png' %}" class="img-brand" alt="Zoalinoo Burger">
-            Zoalinoo Burger
+            {% trans 'Zoalinoo Burger' %}
           </h5>
-          <p>Order your favorite burger, and get it wherever you are.</p>
+          <p>{% trans 'Order your favorite burger, and get it wherever you are.' %}</p>
         </div>
 
         <hr class="clearfix w-100 d-md-none pb-3">
 
         <div class="col-md-3 mb-md-0 mb-3">
 
-          <h5 class="text-uppercase">Delivery Service</h5>
+          <h5 class="text-uppercase">{% trans 'Delivery Service' %}</h5>
 
           <ul class="list-unstyled">
             <li><a href="tel:+249929700059">0929700059</a></li>
@@ -30,7 +31,7 @@
 
         <div class="col-md-3 mb-md-0 mb-3">
 
-          <h5 class="text-uppercase">Join Us</h5>
+          <h5 class="text-uppercase">{% trans 'Join Us' %}</h5>
 
           <ul class="list-unstyled">
             <li><a href="#">Facebook</a></li>
