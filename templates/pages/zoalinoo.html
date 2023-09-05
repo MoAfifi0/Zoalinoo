@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block title %}Zoalinoo{% endblock %}
 
 {% block content %}
 <div class="my-content container p-5 my-5 rounded border border-warning">
-    <h2 class="text-center">Burger is very important</h2>
+    <h2 class="text-center">{% trans 'Burger is very important' %}</h2>
     <hr>
-    <p>Zoalinoo Burger is a quick and easy meal option for people who are busy or on-the-go.</p>
-    <p>Zoalinoo Burger is a good option for people who work late or have busy schedules.</p>
-    <p>Zoalinoo Burger offers drive-thru service, making it easy to get food without leaving your car.</p>
-    <p>Zoalinoo Burger offers a delivery service, making it easy to get food delivered to your home or office.</p>
-    <p>Zoalinoo Burger offers online ordering, making it easy to order food from your computer or smartphone.</p>
-    <p>Zoalinoo Burger offers rewards programs that allow you to earn points or discounts on future purchases.</p>
-    <p>Zoalinoo Burger can be a good source of protein and other nutrients.</p>
-    <p>Zoalinoo Burger can be a good option for people with dietary restrictions if you choose menu items that meet your needs.</p>
-    <p>Zoalinoo Burger can be a social experience if you enjoy eating out with friends or family.</p>
-    <p>Burgers are a good source of protein, which is important for building and repairing muscles.</p>
-    <p>Burgers can be a fun treat or indulgence if you enjoy them in moderation.</p>
-    <p>Burgers can be customized to your liking with different toppings and condiments.</p>
+    <p>{% trans 'Zoalinoo Burger is a quick and easy meal option for people who are busy or on-the-go.' %}</p>
+    <p>{% trans 'Zoalinoo Burger is a good option for people who work late or have busy schedules.' %}</p>
+    <p>{% trans 'Zoalinoo Burger offers drive-thru service, making it easy to get food without leaving your car.' %}</p>
+    <p>{% trans 'Zoalinoo Burger offers a delivery service, making it easy to get food delivered to your home or office.' %}</p>
+    <p>{% trans 'Zoalinoo Burger offers online ordering, making it easy to order food from your computer or smartphone.' %}</p>
+    <p>{% trans 'Zoalinoo Burger offers rewards programs that allow you to earn points or discounts on future purchases.' %}</p>
+    <p>{% trans 'Zoalinoo Burger can be a good source of protein and other nutrients.' %}</p>
+    <p>{% trans 'Zoalinoo Burger can be a good option for people with dietary restrictions if you choose menu items that meet your needs.' %}</p>
+    <p>{% trans 'Zoalinoo Burger can be a social experience if you enjoy eating out with friends or family.' %}</p>
+    <p>{% trans 'Burgers are a good source of protein, which is important for building and repairing muscles.' %}</p>
+    <p>{% trans 'Burgers can be a fun treat or indulgence if you enjoy them in moderation.' %}</p>
+    <p>{% trans 'Burgers can be customized to your liking with different toppings and condiments.' %}</p>
 </div>
 {% endblock %}
